@@ -16,3 +16,209 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+} */
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* css body başlangıç  */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+/* css body bitiş  */
+
+/* input css ler başlangıç */
+.search-div {
+  margin-top: 50px;
+}
+
+.search-input {
+  width: 272px;
+  height: 40px;
+  gap: 8px;
+  border-radius: 8px;
+}
+.search-btn {
+  text-align: center;
+  padding: 0%;
+  width: 91px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: white;
+}
+
+/* input css ler bitiş */
+
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Sabit genişlikte sütunlar */
+  gap: 16px; /* Kartlar arasındaki boşluk */
+  justify-content: center;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.image-card {
+  width: 360px; /* Kart genişliği */
+  /* height: 248px; Kart toplam yüksekliği */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Kart içindeki elemanları yukarı hizala */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.image {
+  width: 100%;
+  height: 152px; /* Sabit resim yüksekliği */
+  object-fit: cover; /* Resmi düzgün kırp */
+}
+
+.info {
+  height: 48px; /* Bilgi kısmı için sabit yükseklik */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4px 8px; /* İçerik boşluğu */
+  font-size: 12px;
+  color: #333;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd; /* Üst sınır */
+}
+
+.info p {
+  margin: 0;
+  line-height: 1.5;
+  /white-space: nowrap; /*Taşma durumunda yazıyı tek satırda tutar  */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px;
+}
+
+.loader {
+  visibility: hidden;
+
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  display: flex;
+  margin: 0 auto;
+}
+.load-more-btn{
+  visibility: hidden;
+  text-align: center;
+  padding: 0%;
+  width: 91px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: white;
+}

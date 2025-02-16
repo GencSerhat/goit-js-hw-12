@@ -1,23 +1,26 @@
-<!DOCTYPE html>
+
+
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Vite App</title>
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
-
+    
+    <div class="search-div">
+      <input class="search-input" type="text" placeholder="Serach images..."></input>
+      <button class="search-btn" type="button">Search</button>
+    </div>
+    <span class="loader"></span>
+    <div class="images-container"></div>
+    <div class="load-more-div">
+      <button type="button" class="load-more-btn">Load More</button>
+    </div>
+   
     <script type="module" src="./main.js"></script>
   </body>
 </html>
