@@ -192,7 +192,7 @@ body {
 .info p {
   margin: 0;
   line-height: 1.5;
-  /white-space: nowrap; /*Taşma durumunda yazıyı tek satırda tutar  */
+  white-space: nowrap; /*Taşma durumunda yazıyı tek satırda tutar  */
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 5px;
