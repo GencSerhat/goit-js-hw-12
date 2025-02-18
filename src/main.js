@@ -48,23 +48,23 @@ searchButton.addEventListener('click', () => {
 
 
 // Sayfa ve limit parametrelerini döndüren fonksiyon
-function fetchPosts() {
-    return new URLSearchParams({
-      per_page: perPage, // API'nin desteklediği per_page parametresi
-      page: currentPage, // Doğru sayfa numarası parametresi
-    }).toString();
+function fetchPosts(query) {
+  return new URLSearchParams({
+    key: API_KEY,
+    q: query,
+    image_type: "photo",
+    orientation: "horizontal",
+    safesearch: "true",
+    per_page: perPage, // API'nin desteklediği per_page parametresi
+    page: currentPage, // Doğru sayfa numarası parametresi
+  }).toString();
   }
 //  Pixabay dan axios ile api çekme
 
 async function fetchImages(query) {
-    const url = `${BASE_URL}?key=${API_KEY}&q=${encodeURIComponent(
-      query
-    )}&${fetchPosts()}&image_type=photo&orientation=horizontal&safesearch=true`;
+  const url = `${BASE_URL}?${fetchPosts(query)}`;
   
     loader.style.visibility = "visible"; // Loader'ı göster
-   
-   
-  
     try {
       const response = await axios.get(url);
   
@@ -93,7 +93,7 @@ async function fetchImages(query) {
               "We're sorry, but you've reached the end of search results",
             position: "topRight",
           });
-          loadMoreBtn.style.visibility = "hidden"; // Load More  Btn'u göster
+          loadMoreBtn.style.visibility = "hidden"; // Load More  Btn'u gizle
       console.log("Hata :", error);
      
     } finally {
